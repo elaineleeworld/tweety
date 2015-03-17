@@ -33,6 +33,8 @@
 			options = {:count => 10}
 			@tweets = client.user_timeline(params[:search], options)
 
+				Tweet.create(username: 'barackobama', content: 'saying this right now!')
+				
 			    @tweets.each do |t|
 			       Tweet.create do |u|
 				    u.username =  t.screen_name
