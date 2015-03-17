@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :tweets, only: :index
 
+ post '/tweets/save_tweets_to_database' => 'tweets#save_tweets_to_database', :as => 'save_tweets_to_database'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
